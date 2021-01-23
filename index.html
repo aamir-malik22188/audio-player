@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+
+    <link rel="shortcut icon" href="#">
+
+    <title>MusicAM</title>
+</head>
+<body>
+
+<main>
+
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">MusicAM</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#consoleSection">Player</a></li>
+            <li><a href="#credit">Credits</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#consoleSection">Player</a></li>
+        <li><a href="#credit">Artists</a></li>
+      </ul>
+
+
+
+
+
+
+<section id='landing'>
+
+    <div class="container-fluid" id='landingImage'>
+        <div class="row">
+            <div class="col s12 m12 l12" >
+                <img id="landingImage" src="images/landing-image.png">
+            </div>
+        </div>
+    </div>
+</section>    
+
+
+
+
+
+<section id="consoleSection">
+
+
+
+<div class="container-fluid" id="playerConsole">
+    <div class="row"  >
+        <div class="col s12 m12 l12" >
+            <div class="col s12 m12 l12">
+                <div class="offset1">Audio</div>
+                <div class="offset2">Player</div>
+              </div>
+        </div>
+          <div class="card" id="player">
+            <div class="card-content">
+                <div class="row" id="track-info">
+                    <div id="albumImage"></div>
+                    <div class="card-action">  
+                        <div id="songName"></div>
+                        <div id="artistName"></div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="slider_container"> 
+                            <div class="currentTime"></div> 
+                            <input type="range" min="1" max="100" value="0" id="songSlide" onchange="seekTo()"> 
+                            <div class="totalDuration">00:00</div> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="row" id="audio-controls">
+                    <div class="col s12 m12 l12">
+                        <button id="skip-previous" onclick="prevTrack()"><i class="small material-icons">skip_previous</i></button>
+                        <button id="play" onclick="playpauseTrack()"><i class="small material-icons">play_arrow</i></button>
+                        <button id="skip-next" onclick="nextTrack()"><i class="small material-icons">skip_next</i></button>
+                    </div>
+                </div>
+                <div id="nowPlaying"></div>
+            </div>
+          </div>
+      </div>
+</div>
+
+</section>
+
+
+<section id="credit">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h2>Artist Credit</h2>
+                <span>Royalty free music was provided by Audio Library</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="credit-height">
+            <div class="col s12 m6 l4">
+                <div class="col s12 m12 l12" >
+                    <div class="card-panel" id="credit-card">
+                        <p>Song: Bad Intentions <br>
+                            Artist: Le Gang </p>
+                            <hr>
+                        <span class="credit-links">
+                            <p>Soundcloud: </p><a href="https://soundcloud.com/thisislegang">https://soundcloud.com/thisislegang</a><br>
+                            <p>Free Download / Stream: </p><a href="https://bit.ly/-bad-intentions">https://bit.ly/-bad-intentions</a> <br>
+                            <p>Music promoted Audio Library:</p> <a href="https://youtu.be/ulKHXjEJsu4"> https://youtu.be/ulKHXjEJsu4> </a> <br>
+                            <p>Creative Commons —<br> Attribution 3.0 Unported — CC BY 3.0</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="col s12 m12 l12 " >
+                    <div class="card-panel" id="credit-card">
+                        <p>Song: Come Along <br>
+                             Artist: Jay Someday </p>
+                             <hr>
+                        <span class="credit-links">  
+                            <p>Soundcloud:</p> <a href="https://soundcloud.com/jaysomeday">https://soundcloud.com/jaysomeday</a> <br>
+                            <p>Free Download / Stream:</p> <a href="https://bit.ly/-come-along">https://bit.ly/-come-along</a> <br>
+                            <p>Music promoted by Audio Library</p> <a href="https://youtu.be/JZAO9no1SM8">https://youtu.be/JZAO9no1SM8</a> <br>
+                            <p>Creative Commons —<br> Attribution 3.0 Unported — CC BY 3.0</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="col s12 m12 l12" >
+                    <div class="card-panel" id="credit-card">
+                        <p>Song: Echoes <br>
+                            Artist: LiQWYD </p>
+                        <hr>
+                        <span class="credit-links">
+                            <p>Soundcloud:</p> <a href="https://soundcloud.com/liqwyd"> https://soundcloud.com/liqwyd</a> <br>
+                            <p>Free Download / Stream:</p> <a href="https://bit.ly/-_echoes">https://bit.ly/-_echoes</a> <br>
+                            <p>Music promoted by Audio Library</p> <a href="https://youtu.be/jYAPLnMiZ5g">https://youtu.be/jYAPLnMiZ5g</a> <br>
+                            <p>Creative Commons —<br> Attribution 3.0 Unported — CC BY 3.0</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="col s12 m12 l12" >
+              <div class="card-panel" id="credit-card">
+                <p>Song: Voice  <br>
+                    Artist: KV </p>
+                <hr>
+                <span class="credit-links">
+                    <p>Youtube:</p> <a href="https://youtube.com/c/KVmusicprod">https://youtube.com/c/KVmusicprod</a> <br>
+                    <p>Free Download / Stream:</p> <a href='https://bit.ly/a_voice'>https://bit.ly/a_voice</a> <br>
+                    <p>Music promoted by Audio Library</p> <a href="https://youtu.be/J1XgVI0v92w">https://youtu.be/J1XgVI0v92w</a> <br>
+                    <p>Creative Commons —<br> Attribution 3.0 Unported — CC BY 3.0</p>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="col s12 m12 l12" >
+              <div class="card-panel" id="credit-card">
+                <p>Song: Coast<br>
+                Artist: Your Friend, Ghost </p>
+                <hr>
+                <span class="credit-links">
+                    <p>Soundcloud:</p> <a href="https://soundcloud.com/yourfriendghost845">https://soundcloud.com/yourfriendghost845</a> <br>
+                    <p>Free Download / Stream:</p> <a href="https://bit.ly/al-coast">https://bit.ly/al-coast</a> <br>
+                    </p>Music promoted by Audio Library</p> <a href="https://youtu.be/ZO0ym0Nz-Mo">https://youtu.be/ZO0ym0Nz-Mo</a> <br>
+                    <p>Creative Commons —<br> Attribution 3.0 Unported — CC BY 3.0</p>
+                </span>
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>  
+
+<footer>
+    <p>This is a mock website for portfolio purposes <br>
+        Music was provided by Audio Library</p>
+
+</footer>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="/lofi-player/app.js"></script>        
+
+</body>
+</html>
