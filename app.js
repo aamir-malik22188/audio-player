@@ -24,32 +24,32 @@ let trackList = [
   { 
     name: "Bad Intentions", 
     artist: "Le Gang", 
-    image: "/lofi-player/images/bad-intentions.png", 
-    path: "/lofi-player/audio/bad-intentions.mp3",
+    image: "images/bad-intentions.png", 
+    path: "audio/bad-intentions.mp3",
   }, 
   { 
     name: "Come Along", 
     artist: "Jay Someday", 
-    image: "/lofi-player/images/come-along.png", 
-    path: "/lofi-player/audio/come-along.mp3"
+    image: "images/come-along.png", 
+    path: "audio/come-along.mp3"
   }, 
   { 
     name: "Echoes", 
     artist: "LiQWYD", 
-    image: "/lofi-player/images/echoes.png", 
-    path: "/lofi-player/audio/echoes.mp3", 
+    image: "images/echoes.png", 
+    path: "audio/echoes.mp3", 
   }, 
   { 
     name: "Voice", 
     artist: "KV", 
-    image: "/lofi-player/images/voice.jpg", 
-    path: "/lofi-player/audio/voice.mp3", 
+    image: "images/voice.jpg", 
+    path: "audio/voice.mp3", 
   }, 
   { 
     name: "Coast", 
     artist: "Your Friend, Ghost", 
-    image: "/lofi-player/images/coast.png", 
-    path: "/lofi-player/audio/coast.mp3", 
+    image: "images/coast.png", 
+    path: "audio/coast.mp3", 
   }, 
 ]; 
 
@@ -64,7 +64,6 @@ function loadTrack(trackIndex) {
   
   // Update details of the track 
   albumImage.style.backgroundImage = "url(" + trackList[trackIndex].image + ")";
-  // original albumImage.backgroundimage = "url("  + trackList[trackIndex].image + ")"; 
   songName.textContent = trackList[trackIndex].name; 
   artistName.textContent = trackList[trackIndex].artist; 
   nowPlaying.textContent =   "PLAYING " + (trackIndex + 1) + " OF " + trackList.length; 

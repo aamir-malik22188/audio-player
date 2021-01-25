@@ -387,6 +387,10 @@ footer{
         align-items: center;
         transform: translate(0%, 10%);
     }
+    
+    #credit-height{
+        max-width: 90%;
+    }
     @keyframes offsetDown{
         0%{
             transform: translateX(0%);
@@ -432,7 +436,7 @@ footer{
     }
     
     #credit-height{
-        width: 50%;
+        max-width: 60%;
     }
     
 
