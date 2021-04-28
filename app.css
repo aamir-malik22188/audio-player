@@ -20,9 +20,6 @@ body{
     height: 100%;
 }
 
-
-
-
 .container-fluid{
     position: relative;
     margin: 0%;
@@ -34,19 +31,19 @@ body{
 nav {
     background: linear-gradient(270deg, rgba(35,18,11,1) 50%, rgba(253,184,39,1) 50%) !important;
     width: 100%;
-    height: 56px;
-    line-height: 1rem;
     border: 0;
     box-shadow: none !important;
 }
 
-.brand-logo{
-    padding: 15px !important;
-}
+
 
 nav a, li{
     color: #f1f1f1 !important;
+    font-size: 1.5rem !important;
 }
+
+
+
 
 .sidenav{
     background: linear-gradient(357deg, rgba(255,125,44,1) 0%, rgba(255,238,43,1) 100%);
@@ -55,15 +52,18 @@ nav a, li{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 #mobile-demo a, li{
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 25px;
-    
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-demo a, li {
+        margin: 0;
+    }
 
 }
 
@@ -74,14 +74,13 @@ nav a, li{
 #landing{
     height: 100vh;
     background: linear-gradient(270deg, rgba(35,18,11,1) 50%, rgba(253,184,39,1) 50%) !important;
+    display: grid;
+    place-content: center;
 }
 
-#landingImage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(0%, 25%);
-    filter: drop-shadow(0 40mm 20mm rgb(35,18,11, 0.5));
+#caption{
+    color: #f1f1f1;
+    font-size: 2rem !important;
 }
 
 
@@ -151,6 +150,8 @@ nav a, li{
 
 
 #playerConsole{
+    display: grid;
+    place-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,10 +281,7 @@ footer{
 
 
 @media screen and (min-width: 768px) {
-    #landingImage{
-        width: 100%; 
-        transform: translate(0%, 35%);
-    }
+ 
     #playerConsole{
         justify-content: center;
         align-items: center;
@@ -329,10 +327,6 @@ footer{
 }
 
 @media screen and (min-width: 1024px) {
-    #landingImage{
-        display: block; 
-        transform: translate(0%, 15%);
-    }
     #playerConsole{
         display: flex;
         justify-content: center;
@@ -371,15 +365,13 @@ footer{
 
 }
 
-   
+       .brand-logo {
+           margin-left: 25px;
+       }
   }
 
 @media screen and (min-width: 1280px) {
-    #landingImage{
-        display: inline-block;
-        width: 80%; 
-        transform: translate(15%, 10%);
-    }
+
 
     #playerConsole{
         display: flex;
@@ -430,10 +422,6 @@ footer{
 }
 
 @media screen and (min-width: 1500px) {
-    #landingImage{
-        transform: translate(34%, 10%);
-        width: 60%; 
-    }
     
     #credit-height{
         max-width: 60%;
